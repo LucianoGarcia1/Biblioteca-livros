@@ -1,0 +1,8 @@
+.content {
+  width: 100%;
+  min-height: 100vh;
+  @include flex(space-between, flex-start, row);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  position: relative;
+}

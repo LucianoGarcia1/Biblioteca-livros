@@ -1,0 +1,39 @@
+.box {
+  max-width: 400px;
+  width: 100%;
+  min-height: 400px;
+  padding: 1rem;
+  @include flex(center, center, column);
+  gap: 0.5rem;
+  border-left: 1px solid $destaque;
+  border-top: 1px solid $destaque;
+  border-radius: 5px;
+
+  @include device(t) {
+    max-width: 300px;
+  }
+  @include device(m) {
+    max-width: 100%;
+  }
+
+  span {
+    font-size: $textos;
+    color: $texto;
+  }
+
+  img {
+    max-width: 180px;
+    height: 180px;
+    object-fit: cover;
+    transition: all 0.25s;
+
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+
+  h3 {
+    font-size: $titulosSmall;
+    color: $destaque;
+  }
+}

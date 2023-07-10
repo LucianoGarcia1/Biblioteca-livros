@@ -1,0 +1,59 @@
+.header {
+  width: 100%;
+  padding: 1rem;
+  @include flex(space-between, center, row);
+
+  @include device(d) {
+    @include flex(space-between, center, column);
+    gap: 0.5rem;
+  }
+
+  .logo {
+    h1 {
+      font-size: $titulos;
+      color: $destaque;
+      font-weight: bold;
+    }
+  }
+
+  .nav {
+    .menu {
+      a {
+        font-size: $textos;
+        color: $destaque;
+        text-decoration: none;
+
+        &:nth-child(2) {
+          margin-left: 1rem;
+        }
+        &.active {
+          color: $realce;
+        }
+      }
+    }
+  }
+  .form {
+    max-width: 500px;
+    width: 100%;
+
+    input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      border: 1px solid $texto;
+      font-size: $textos;
+      color: $texto;
+      outline: none;
+      transition: all 0.25s;
+
+      &::placeholder {
+        color: $texto;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: $destaque;
+      }
+    }
+  }
+}

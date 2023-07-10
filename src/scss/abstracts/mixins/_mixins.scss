@@ -1,0 +1,21 @@
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+@mixin device($size) {
+  @if $size == d {
+    @media screen and (max-width: $desktop) {
+      @content;
+    }
+  } @else if $size == t {
+    @media screen and (max-width: $tablet) {
+      @content;
+    }
+  } @else if $size == m {
+    @media screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+}

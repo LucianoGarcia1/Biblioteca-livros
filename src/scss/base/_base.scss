@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $fundo;
+}
+
+.error {
+  min-width: 15%;
+  height: 80px;
+  padding: 1rem;
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  border-radius: 5px;
+  background-color: $fundo;
+  z-index: 1000;
+  color: $realce;
+  font-size: $textos;
+  @include flex(center, center, row);
+  transition: all 0.5s;
+  border-left: 20px solid $realce;
+  border-right: 20px solid $realce;
+  border-top: 1px solid $realce;
+  border-bottom: 1px solid $realce;
+}

@@ -1,0 +1,59 @@
+.modal {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  @include flex(center, center, row);
+  @include device(t) {
+    padding: 0 1rem;
+  }
+
+  div {
+    max-width: 700px;
+    min-height: 400px;
+    background-color: $destaque;
+    padding: 1rem;
+    @include flex(flex-start, center, column);
+    gap: 1rem;
+    border-radius: 5px;
+
+    h2 {
+      font-size: $titulos;
+      color: $fundo;
+    }
+
+    form {
+      width: 100%;
+
+      input {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 5px;
+        border: transparent;
+        font-size: $textos;
+        color: $texto;
+        outline: transparent;
+
+        &::placeholder {
+          font-size: $textos;
+          color: $texto;
+        }
+      }
+
+      button {
+        background-color: $realce;
+        margin-top: 1rem;
+        color: $fundo;
+
+        &:nth-child(3) {
+          background-color: $fundo;
+          color: $texto;
+        }
+      }
+    }
+  }
+}

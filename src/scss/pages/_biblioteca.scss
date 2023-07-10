@@ -1,0 +1,6 @@
+.biblioteca {
+  width: 100%;
+  min-height: 100vh;
+  @include flex(flex-start, flex-start, column);
+  padding: 1rem;
+}
