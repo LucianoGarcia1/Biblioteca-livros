@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext } from "react";
 import { Button } from "./Button";
 import { useLocation } from "react-router-dom";
 import { MyContext } from "../services/Context";
@@ -42,18 +42,19 @@ export const Box = ({
       <h3>{title}</h3>
       <Button
         type="button"
-        children={location.pathname === "/" ? "Adicionar" : "Excluir"}
         click={
           location.pathname === "/"
             ? activeModal
             : () => handleRemoveBook(index)
         }
-      />
+      >
+        {location.pathname === "/" ? "Adicionar" : "Excluir"}
+      </Button>
 
       {completedBook && (
         <p>
           Estimativa de término: {completedBook} dias para ler {pageCount}{" "}
-          Páginas, lendo {inputNumber} página's por dia!
+          Páginas, lendo {inputNumber} páginas por dia!
         </p>
       )}
     </div>
