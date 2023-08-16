@@ -5,6 +5,7 @@ import "./scss/index.css";
 import { Biblioteca } from "./pages/Biblioteca";
 import { MyContext } from "./services/Context";
 import { useContext } from "react";
+import { NotFound } from "./pages/404";
 const App = () => {
   const { error } = useContext(MyContext);
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/biblioteca" element={<Biblioteca />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

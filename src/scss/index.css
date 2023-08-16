@@ -67,6 +67,15 @@ body {
   padding: 1rem;
 }
 
+.Notfound {
+  width: 100%;
+  text-align: center;
+}
+.Notfound h1 {
+  font-size: 2rem;
+  color: #ff6b6b;
+}
+
 .header {
   width: 100%;
   padding: 1rem;
