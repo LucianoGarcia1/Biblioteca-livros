@@ -6,7 +6,7 @@ export const Home = () => {
   const { dados, modal } = useContext(MyContext);
   return (
     <section className="home">
-      <Content acdados={dados} modal={modal} />
+      <Content dados={dados} modal={modal} />
     </section>
   );
 };
