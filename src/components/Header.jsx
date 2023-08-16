@@ -1,16 +1,18 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { MyContext } from "../services/Context";
 import Api from "../services/api";
 import { NavLink, useLocation } from "react-router-dom";
-import { key } from "../services/auth";
 
 export const Header = () => {
   const [input, setInput] = useState("");
   const { setDados, setError } = useContext(MyContext);
   const location = useLocation();
+
   const getBooks = async (input) => {
     try {
-      const response = await Api.get(`volumes?q=intitle:${input}&key=${key}`);
+      const response = await Api.get(
+        `volumes?q=intitle:${input}&key=AIzaSyCBegqpDqJXYzKH3REPJNWZKWF7lOb4Ppg`
+      );
       const jsonData = response.data;
       setDados(jsonData);
     } catch (erro) {

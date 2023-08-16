@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Box } from "./Box";
 import { Modal } from "./Modal";
 import { useLocation } from "react-router-dom";

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Button } from "./Button";
 import { MyContext } from "../services/Context";
 import { useNavigate } from "react-router-dom";
@@ -67,8 +67,12 @@ export const Modal = ({ bookData, addBookToLibrary }) => {
             }}
           />
 
-          <Button type="button" children="Finalizar" click={addBook} />
-          <Button type="button" children="Cancelar" click={closeModal} />
+          <Button type="button" click={addBook}>
+            Finalizar
+          </Button>
+          <Button type="button" click={closeModal}>
+            Cancelar
+          </Button>
         </form>
       </div>
     </div>
